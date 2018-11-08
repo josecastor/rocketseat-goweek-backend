@@ -7,7 +7,7 @@ const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
-mongoose.connect('mongodb://thecastor:thecastor123@ds155313.mlab.com:55313/goweek-backend-thecastor', {useNewUrlParser: true})
+mongoose.connect('mongodb://<user>:<senha>@<servidor>/<database>', {useNewUrlParser: true})
 
 app.use((req, res, next) => {
     req.io = io
